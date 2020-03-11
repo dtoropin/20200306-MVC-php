@@ -24,7 +24,9 @@
                         {% endif %}
                 >
                     <span class="hidden user__id"> {{ people.id }} </span>
-                    <img src="/images/avatars/{{ people.avatar }}" alt="avatar" class="user__img">
+                    <div class="user__img">
+                        <div class="user__pic" style="background-image:url('/images/avatars/{{ people.avatar }}');"></div>
+                    </div>
                     <h2 class="user__name"> {{ people.name }}
                         <small class="user__age">({{ people.age }} лет)
                             {% if people.age < 18 %}

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2020-03-11 17:50:53
+Date: 2020-03-11 18:00:58
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -24,12 +24,13 @@ CREATE TABLE `files` (
   `file_name` varchar(255) NOT NULL,
   `user_id` tinyint(4) NOT NULL,
   PRIMARY KEY (`id_file`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of files
 -- ----------------------------
 INSERT INTO `files` VALUES ('20', 'abk9yxOfJ90.jpg', '1');
+INSERT INTO `files` VALUES ('21', 'c8ZgP3ZDGvY.jpg', '1');
 
 -- ----------------------------
 -- Table structure for `users`
@@ -43,9 +44,9 @@ CREATE TABLE `users` (
   `avatar` tinytext NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=276 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=287 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'Denis', '46', 'Developer', 'user.png', '$2y$10$48NxLAR6kF1qFaUsfwn/muE0/r.bbMPbizbO/JLSkLzurapw5YYQK');
+INSERT INTO `users` VALUES ('1', 'Denis', '46', 'Developer', 'IMG_0795.JPG', '$2y$10$48NxLAR6kF1qFaUsfwn/muE0/r.bbMPbizbO/JLSkLzurapw5YYQK');

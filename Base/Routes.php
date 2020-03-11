@@ -6,7 +6,7 @@ class Routes
 {
     public function start()
     {
-        $route = 'user';
+        $route = 'User';
         $action = 'index';
         $param = '';
         $request = trim($_SERVER['REQUEST_URI'], '/');
@@ -28,6 +28,9 @@ class Routes
     private function _action(string $controllerName, string $actionName, $param = '')
     {
         $controllerName = '\App\Controller\\' . $controllerName . '_Controller';
+        if (!class_exists($controllerName)) {
+            throw new \Exception();
+        }
         $controller = new $controllerName;
         $action = $actionName;
 

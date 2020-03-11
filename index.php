@@ -8,4 +8,8 @@ require_once 'Base/config.php';
 session_start();
 
 $route = new \Base\Routes();
-$route->start();
+try {
+    $route->start();
+} catch (Exception $e) {
+    \Base\Error404::Error();
+}

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50725
 File Encoding         : 65001
 
-Date: 2020-03-11 17:36:52
+Date: 2020-03-11 17:50:53
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -43,9 +43,9 @@ CREATE TABLE `users` (
   `avatar` tinytext NOT NULL,
   `password` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=265 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=276 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', 'Denis', '46', 'Developer', 'user.png', '$2y$10$sir0gyqteF2UP8WZFpPqsexgW/pfE8MMVI7PdDf9L13PXfRtz4wl2');
+INSERT INTO `users` VALUES ('1', 'Denis', '46', 'Developer', 'user.png', '$2y$10$48NxLAR6kF1qFaUsfwn/muE0/r.bbMPbizbO/JLSkLzurapw5YYQK');

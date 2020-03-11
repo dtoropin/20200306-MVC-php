@@ -1,0 +1,14 @@
+{
+  "require": {
+    "j4mie/idiorm": "1.5.*",
+    "twig/twig": "^2.9.0",
+    "fzaninotto/faker": "1.9.*",
+    "intervention/image": "2.5.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "App/",
+      "Base\\": "Base/"
+    }
+  }
+}

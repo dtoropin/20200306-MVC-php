@@ -1,0 +1,15 @@
+{% extends "index.twig" %}
+
+{% block header %}
+    <div class="header">
+        <h2> {{ context }} </h2>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <form class="form" action="" method="post">
+        <input class="form__input" type="text" placeholder="name" name="name" autofocus>
+        <input class="form__input" type="password" placeholder="password" name="pass">
+        <button class="form__btn" type="submit">Save</button>
+    </form>
+{% endblock %}

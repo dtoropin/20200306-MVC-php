@@ -1,0 +1,40 @@
+{% extends "index.twig" %}
+
+{% block header %}
+    <div class="header">
+        <div class="header__buttons">
+            <button class="header__btn" data-action="login">login</button>
+            <button class="header__btn" data-action="register">register</button>
+        </div>
+        <button class="header__order">ASC</button>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="user">
+        <ul class="user__list">
+            {% for people in context %}
+                <li class="user__item"
+                        {% if people.age < 18 %}
+                            style="background: #ffdbec"
+                        {% elseif people.id == 1 %}
+                            style="background: #dfdfdf"
+                        {% else %}
+                            style="background: #dce9ff"
+                        {% endif %}
+                >
+                    <span class="hidden user__id"> {{ people.id }} </span>
+                    <img src="/images/avatars/{{ people.avatar }}" alt="avatar" class="user__img">
+                    <h2 class="user__name"> {{ people.name }}
+                        <small class="user__age">({{ people.age }} лет)
+                            {% if people.age < 18 %}
+                                <span class="user__minor">- несовершеннолетний</span>
+                            {% endif %}
+                        </small>
+                    </h2>
+                    <p class="user__desc"> {{ people.desc }} </p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

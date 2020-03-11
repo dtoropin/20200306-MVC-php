@@ -1,0 +1,128 @@
+.wrapper {
+    font-family: 'Roboto', sans-serif;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    height: 40px;
+    padding: 5px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__order {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.user__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.user__item {
+    list-style-type: none;
+    width: 250px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s background-color ease;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.user__item:hover {
+    background: #d3d3d3;
+}
+
+.user__img {
+    width: 70px;
+    height: auto;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.user__age {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.user__minor {
+    font-size: .9rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.form {
+    width: 300px;
+}
+
+.form__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    outline: none;
+    resize: none;
+}
+
+.form__btn,
+.header__btn,
+.files__btn {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #0c94cc;
+    outline: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.form__btn:hover,
+.header__btn:hover,
+.files__btn:hover {
+    background: #0ca4dc;
+}
+
+.form__btn:active,
+.header__btn:active,
+.files__btn:active {
+    box-shadow: inset 0 0 5px #5e5e5e;
+}
+
+.files__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.files__item {
+    list-style-type: none;
+    width: 250px;
+    margin: 7px;
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+.files__img {
+    width: 100%;
+    height: auto;
+}

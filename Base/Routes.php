@@ -6,7 +6,7 @@ class Routes
 {
     public function start()
     {
-        $route = 'User';
+        $route = 'Index';
         $action = 'index';
         $param = '';
         $request = trim($_SERVER['REQUEST_URI'], '/');

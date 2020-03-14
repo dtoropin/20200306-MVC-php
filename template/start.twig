@@ -1,0 +1,17 @@
+{% extends "index.twig" %}
+
+{% block header %}
+    <div class="header">
+        <div class="header__buttons">
+            <button class="header__btn" data-action="login">login</button>
+            <button class="header__btn" data-action="register">register</button>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="start">
+        <div class="start__btn" data-link="user">Users</div>
+        <div class="start__btn" data-link="file">Files</div>
+    </div>
+{% endblock %}

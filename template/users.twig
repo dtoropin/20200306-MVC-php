@@ -6,7 +6,7 @@
             <button class="header__btn" data-action="login">login</button>
             <button class="header__btn" data-action="register">register</button>
         </div>
-        <button class="header__order">ASC</button>
+        <button class="header__order"></button>
     </div>
 {% endblock %}
 
@@ -23,9 +23,12 @@
                             style="background: #dce9ff"
                         {% endif %}
                 >
-                    <span class="hidden user__id"> {{ people.id }} </span>
+                    <div class="user__idx">id:
+                        <span class="user__id"> {{ people.id }} </span>
+                    </div>
                     <div class="user__img">
-                        <div class="user__pic" style="background-image:url('/images/avatars/{{ people.avatar }}');"></div>
+                        <div class="user__pic"
+                             style="background-image:url('/images/avatars/{{ people.avatar }}');"></div>
                     </div>
                     <h2 class="user__name"> {{ people.name }}
                         <small class="user__age">({{ people.age }} лет)

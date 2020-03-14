@@ -8,7 +8,11 @@ class User_Model
 {
     public function index()
     {
-        $person = \ORM::for_table('users')->order_by_asc('age')->find_many();
+        if (!isset($_COOKIE['sort']) || $_COOKIE['sort'] == 'ASC') {
+            $person = \ORM::for_table('users')->order_by_asc('age')->find_many();
+        } else {
+            $person = \ORM::for_table('users')->order_by_desc('age')->find_many();
+        }
         return ['context' => $person];
     }
 

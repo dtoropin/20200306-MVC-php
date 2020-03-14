@@ -2,6 +2,7 @@
 
 namespace App\Model;
 
+use Intervention\Image\Constraint;
 use Intervention\Image\ImageManagerStatic as Image;
 
 class File_Model
@@ -29,6 +30,10 @@ class File_Model
             $fileTmpPath = $_FILES['file']['tmp_name'];
             $fileName = $_FILES['file']['name'];
             $img = Image::make($fileTmpPath);
+            $img->resize(250, 160, function (Constraint $constraint) {
+                $constraint->aspectRatio();
+                $constraint->upsize();
+            });
             $img->save('./images/files/' . $fileName);
             $file = \ORM::for_table('files')->create();
             $file->file_name = $fileName;

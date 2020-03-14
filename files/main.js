@@ -2,10 +2,16 @@
 
     const init = function () {
         _setUpListners();
+        var text = $.cookie('sort') ? $.cookie('sort') : 'ASC';
+        $('.header__order').html(text);
     };
 
     const _setUpListners = function () {
-        $('.user__item').on('click', function (e) {
+        $('.start__btn').on('click', function () {
+            var link = $(this).attr('data-link');
+            document.location.href = '/' + link;
+        });
+        $('.user__item').on('click', function () {
             var id = $(this).find('.user__id').text();
             document.location.href = '/file/user/' + parseInt(id);
         });
@@ -18,14 +24,12 @@
             document.location.href = '/file/add/' + id;
         });
         $('.header__order').on('click', function () {
-            if (!$(this).data('status')) {
-                $(this).html('DESC');
-                $(this).data('status', true);
+            if ($.cookie('sort') && $.cookie('sort') === 'DESC') {
+                $.cookie('sort', 'ASC', {path: '/'});
+            } else {
+                $.cookie('sort', 'DESC', {path: '/'});
             }
-            else {
-                $(this).html('ASC');
-                $(this).data('status', false);
-            }
+            document.location.href = '/user';
         });
     };
 

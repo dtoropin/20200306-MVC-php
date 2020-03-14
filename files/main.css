@@ -180,6 +180,7 @@ a {
 }
 
 .files__item {
+    display: inline-block;
     float: left;
     list-style-type: none;
     width: 250px;

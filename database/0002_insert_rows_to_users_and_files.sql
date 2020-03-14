@@ -3,6 +3,7 @@
 -- ----------------------------
 INSERT INTO `files` VALUES ('1', 'abk9yxOfJ90.jpg', '1');
 INSERT INTO `files` VALUES ('2', 'c8ZgP3ZDGvY.jpg', '1');
+INSERT INTO `files` VALUES ('3', 'GoOCWBNqwTI.jpg', '5');
 
 -- ----------------------------
 -- Records of users

@@ -14,6 +14,12 @@ a {
     line-height: 1.8;
 }
 
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .header {
     height: 40px;
     padding: 5px;
@@ -166,14 +172,15 @@ a {
 }
 
 .files__list {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    /*display: flex;*/
+    /*justify-content: flex-start;*/
+    /*flex-wrap: wrap;*/
     margin: 0;
     padding: 0;
 }
 
 .files__item {
+    float: left;
     list-style-type: none;
     width: 250px;
     margin: 7px;

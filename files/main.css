@@ -14,10 +14,10 @@ a {
     line-height: 1.8;
 }
 
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
+img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .header {
@@ -172,26 +172,19 @@ a {
 }
 
 .files__list {
-    /*display: flex;*/
-    /*justify-content: flex-start;*/
-    /*flex-wrap: wrap;*/
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
 }
 
 .files__item {
-    display: inline-block;
-    float: left;
     list-style-type: none;
     width: 250px;
     margin: 7px;
     padding: 3px;
     border: 1px solid #ccc;
-}
-
-.files__img {
-    width: 100%;
-    height: auto;
 }
 
 .error {

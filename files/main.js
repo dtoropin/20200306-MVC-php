@@ -31,6 +31,19 @@
             }
             document.location.href = '/user';
         });
+        $('.admin__edit').on('click', function () {
+            var id = $(this).attr('data-id');
+            document.location.href = '/admin/edit/' + id;
+        });
+        $('.admin__delete').on('click', function () {
+            var id = $(this).attr('data-id');
+            if (confirm('Delete userID: ' + id + '?')) {
+                document.location.href = '/admin/delete/' + id;
+            }
+        });
+        $('.admin__create').on('click', function () {
+            document.location.href = '/admin/create';
+        });
     };
 
     return init();

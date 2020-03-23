@@ -1,0 +1,36 @@
+{% extends "index.twig" %}
+
+{% block header %}
+    <div class="header">
+        <h2>Admin Panel</h2>
+        <button class="admin__create">Create user</button>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <table class="admin">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Info</th>
+            <th>E-mail</th>
+            <th>Avatar</th>
+            <th>Action</th>
+        </tr>
+        {% for user in context %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.name }}</td>
+                <td>{{ user.age }}</td>
+                <td>{{ user.desc }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.avatar }}</td>
+                <td>
+                    <button class="admin__edit" data-id="{{ user.id }}">edit</button>
+                    <button class="admin__delete" data-id="{{ user.id }}">del</button>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

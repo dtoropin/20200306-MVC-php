@@ -1,12 +1,29 @@
 <?php
-const DB_TYPE = 'mysql';
-const DB_HOST = 'localhost';
-const DB_NAME = 'mvc';
-const DB_USER = 'root';
-const DB_PASS = '';
 
-const SALT = 'sajnl70&7076^%#SDO';
+use Illuminate\Database\Capsule\Manager as Capsule;
 
-\ORM::configure(DB_TYPE . ':host=' . DB_HOST . ';dbname=' . DB_NAME);
-\ORM::configure('username', DB_USER);
-\ORM::configure('password', DB_PASS);
+$capsule = new Capsule();
+$capsule->addConnection([
+    'driver' => 'mysql',
+    'host' => 'localhost',
+    'database' => 'mvc',
+    'username' => 'root',
+    'password' => '',
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix' => ''
+]);
+$capsule->setAsGlobal();
+$capsule->bootEloquent();
+
+// print log
+$capsule->getConnection()->enableQueryLog();
+function printLog()
+{
+    echo '<pre>';
+    $log = Capsule::connection()->getQueryLog();
+    foreach ($log as $elem) {
+        echo 0.01 * $elem['time'] . ': ' . $elem['query'] . ' bind: ' . json_encode($elem['bindings']) . '<br>';
+    }
+    echo '<hr></pre>';
+}

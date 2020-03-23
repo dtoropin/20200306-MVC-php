@@ -3,10 +3,7 @@
 require_once 'vendor/autoload.php';
 require_once 'Base/config.php';
 
-$migration = new \Base\Migrations();
-$migration->start();
-
-\Base\Fake::fakeData();
+require_once 'database/migrations.php';
 
 session_start();
 

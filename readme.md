@@ -2,4 +2,4 @@
 
 For 'Denis' password: admin
 
-Create mysql base name: mvc (dump -> /database/)
+Create mysql base name: mvc
